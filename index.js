@@ -6,6 +6,8 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.get('/ping', (req, res) => res.send('pong!'))
 
-app.get('/kick', (req, res) => res.send('ass!'))
+app.get('/inventory', (req, res) => 
+    res.json(require('./data'))
+)
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
